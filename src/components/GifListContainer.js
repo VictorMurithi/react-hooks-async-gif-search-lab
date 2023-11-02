@@ -8,10 +8,9 @@ class GifListContainer extends Component {
   };
 
   fetchGifs = (query) => {
+    const apiKey = 'LXOduWeIbEegJZRW11j2TzpXnzB3Jipq';
 
-    const apiUrl = `https://api.giphy.com/v1/gifs/search?q=${query} HERE&api_key=dc6zaTOxFJmzC&rating=g`;
-
-    ;
+    const apiUrl = `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${apiKey}&rating=g`;
 
     fetch(apiUrl)
       .then((response) => response.json())
